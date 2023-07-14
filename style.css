@@ -122,7 +122,7 @@
 
 .img-aboutme {
     height: 400px;
-    width: 100%;
+    width: 300px;
     border-radius: 30px;
     background-size: cover;
     margin-bottom: 30px;
@@ -353,7 +353,7 @@
 
 .icon {
     font-size: 20px;
-    color: #5a7184;
+    color: #cced00;
 }
 
 .icon-container {
@@ -366,4 +366,8 @@
     padding-bottom: 10px;
     padding-right: 12px;
     padding-left: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
