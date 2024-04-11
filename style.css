@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
 
-/*----------------------------------------------------index.html-----------------------------------------*/
+
+
+/*-----------------index.html-----------------------------------------*/
 .nav-item {
     margin-left: 15px;
     margin-right: 15px;
@@ -102,13 +104,15 @@
     }
 }
 
-/*----------------------------------------------------About me-----------------------------------------*/
+/*-----------------About me-----------------------------------------*/
 
 
 .bg-container-aboutme {
     background-color: #323f4b;
     padding: 10px;
+    
 }
+
 
 .heading-aboutme {
     font-size: 20px;
@@ -121,8 +125,8 @@
 }
 
 .img-aboutme {
-    height: 400px;
-    width: 300px;
+    height: 50vh;
+    width: 20vw;
     border-radius: 30px;
     background-size: cover;
     margin-bottom: 30px;
@@ -184,9 +188,12 @@
         margin-left: -50px;
         margin-right: -50px;
     }
+
+
+    
 }
 
-/*----------------------------------------------------projects-----------------------------------------*/
+/*-----------------projects-----------------------------------------*/
 
 .bg-container-portfolio {
     background-color: #3e4c59;
@@ -207,11 +214,13 @@
 .projects-card {
     background-color: #323f4b;
     border-radius: 10px;
+    
 }
 
 .projects-card-img {
-    height: 150px;
+    height: 40vh;
     width: 100%;
+    border-radius: 5px 5px 0 0;
 }
 
 .projects-card-heading {
@@ -235,7 +244,7 @@
 }
 
 
-/*----------------------------------------------------services-----------------------------------------*/
+/*-----------------services-----------------------------------------*/
 
 .bg-container-services {
     background-color: #52606d;
@@ -280,7 +289,7 @@
 }
 
 
-/*----------------------------------------------------workdone-----------------------------------------*/
+/*-----------------workdone-----------------------------------------*/
 
 
 .bg-container-workdone-section {
@@ -311,7 +320,7 @@
     color: white;
 }
 
-/*----------------------------------------------------footer-----------------------------------------*/
+/*-----------------footer-----------------------------------------*/
 
 
 .bg-container-footer-section {
@@ -346,6 +355,9 @@
 
 }
 
+
+
+
 .icon-footer-section {
     color: #5a7184;
     font-size: 20px;
@@ -353,7 +365,7 @@
 
 .icon {
     font-size: 20px;
-    color: #5a7184;
+    color: #cced00;
 }
 
 .icon-container {
@@ -366,4 +378,8 @@
     padding-bottom: 10px;
     padding-right: 12px;
     padding-left: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
