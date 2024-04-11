@@ -88,11 +88,9 @@
     }
 
     .nav-img {
-        height: 11vh;
-        width: 27vw;
-        margin-top: -21px;
-        margin-bottom: -16px;
-        margin-left: -15px;
+        height: 10vh;
+        width: 45vw;
+       
     }
 
     .img-Banner-section {
@@ -180,6 +178,7 @@
         width: 200px;
         border-radius: 30px;
         background-size: cover;
+        margin-bottom: 10px;
     }
 
     .para-aboutme {
