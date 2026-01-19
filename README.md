@@ -4,7 +4,7 @@ Welcome to my personal developer portfolio! This site is a showcase of my skills
 
 ## 🚀 Live Preview
 
-[View Portfolio](https://github.com/lalitendraswamy/) <!-- Replace with actual link when deployed -->
+[View Portfolio](https://www.lalitendra.in/) <!-- Replace with actual link when deployed -->
 
 ---
 
