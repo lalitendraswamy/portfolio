@@ -16,6 +16,12 @@ const Contact = () => {
   });
 
   const [loading, setLoading] = useState(false);
+  const [notification, setNotification] = useState({ type: "", message: "" });
+
+  const showNotification = (type, message) => {
+    setNotification({ type, message });
+    setTimeout(() => setNotification({ type: "", message: "" }), 5000);
+  };
 
   const handleChange = (e) => {
     const { target } = e;
@@ -46,19 +52,13 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
-
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
+          showNotification("success", "Thank you! I will get back to you as soon as possible.");
+          setForm({ name: "", email: "", message: "" });
         },
         (error) => {
           setLoading(false);
           console.error(error);
-
-          alert("Ahh, something went wrong. Please try again");
+          showNotification("error", "Something went wrong. Please try again.");
         }
       );
   };
@@ -119,6 +119,18 @@ const Contact = () => {
           >
             {loading ? "Sending..." : "Send"}
           </button>
+
+          {notification.message && (
+            <div
+              className={`mt-2 px-5 py-3 rounded-lg text-white font-medium text-sm transition-all duration-300 ${notification.type === "success"
+                ? "bg-green-700"
+                : "bg-red-700"
+                }`}
+            >
+              {notification.type === "success" ? "✅ " : "❌ "}
+              {notification.message}
+            </div>
+          )}
         </form>
       </motion.div>
 
