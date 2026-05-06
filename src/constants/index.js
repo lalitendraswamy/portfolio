@@ -40,7 +40,7 @@ import {
 } from "../assets";
 
 // Import Tekisky separately
-import g7cr_logo from "../assets/company/g7cr_logo.png";
+import noventiqai_logo from "../assets/company/noventiqai_logo.png"
 import ve_logo from "../assets/company/ve_logo.png";
 import yt_keyword from "../assets/yt_keyword.webp";
 import emoji_game from "../assets/emoji_game.webp";
@@ -145,8 +145,8 @@ const technologies = [
 const experiences = [
   {
     title: "Software Engineer",
-    company_name: "G7 CR Technologies",
-    icon: g7cr_logo,
+    company_name: "Noventiq Global AI Solutions",
+    icon: noventiqai_logo,
     iconBg: "#383E56",
     date: "Jul 2024 - present",
     points: [
