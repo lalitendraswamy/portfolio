@@ -45,15 +45,12 @@ import ve_logo from "../assets/company/ve_logo.png";
 import yt_keyword from "../assets/yt_keyword.webp";
 import emoji_game from "../assets/emoji_game.webp";
 import insta_clone from "../assets/insta_clone.webp";
+import portfolio_rag_engine from "../assets/portfolio_rag_engine.png";
 
 export const navLinks = [
   {
-    id: "about",
-    title: "About",
-  },
-  {
-    id: "work",
-    title: "Work",
+    id: "projects",
+    title: "Projects",
   },
   {
     id: "contact",
@@ -200,6 +197,32 @@ const testimonials = [
 
 const projects = [
   {
+    name: "RAG Profile Intelligence System",
+    description:
+      "A Retrieval-Augmented Generation (RAG) system integrating LangChain, Gemini API, and vector storage. Features context-aware prompt orchestration, semantic search, dynamic persona simulation (HR, Interviewer, Student, Freelancer).",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "redux",
+        color: "white-text-gradient",
+      },
+      {
+        name: "langchain",
+        color: "green-text-gradient",
+      },
+      {
+        name: "fastapi",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: portfolio_rag_engine,
+    source_code_link: "https://github.com/lalitendraswamy/portfolio-rag-agent",
+    demo_link: "/projects/rag-profile-system",
+  },
+  {
     name: "Youtube Keyword Search Volume",
     description:
       "Youtube Keyword search volume provides valuable insights into the popularity of a term i.e, searched on YouTube....",
@@ -254,7 +277,7 @@ const projects = [
     ],
     image: insta_clone,
     source_code_link: "https://github.com/lalitendraswamy/instaClone",
-  },
+  }
 ];
 
 export { services, technologies, experiences, testimonials, projects };
