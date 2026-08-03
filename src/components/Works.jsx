@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from "react";
 import { Tilt } from "react-tilt";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useNavigate } from "react-router-dom";
+import { FaEye } from "react-icons/fa";
 
 import { styles } from "../styles";
 import { github } from "../assets";
@@ -18,8 +20,10 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  demo_link,
 }) => {
   const cardRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const el = cardRef.current;
@@ -62,10 +66,11 @@ const ProjectCard = ({
             className="w-full h-full object-cover object-left rounded-2xl"
           />
 
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+          <div className="absolute inset-0 flex justify-end m-3 card-img_hover flex-col items-end gap-2">
             <div
               onClick={() => window.open(source_code_link, "_blank")}
               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+              title="View Source Code"
             >
               <img
                 src={github}
@@ -73,6 +78,18 @@ const ProjectCard = ({
                 className="w-1/2 h-1/2 object-contain"
               />
             </div>
+            {demo_link && (
+              <div
+                onClick={(e) => {
+                  e.stopPropagation();
+                  navigate(demo_link);
+                }}
+                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+                title="Interact Live"
+              >
+                <FaEye className="w-1/2 h-1/2 text-white object-contain" />
+              </div>
+            )}
           </div>
         </div>
 
@@ -96,7 +113,9 @@ const ProjectCard = ({
   );
 };
 
-const Works = () => {
+const Works = ({ isHome = false }) => {
+  const navigate = useNavigate();
+
   useEffect(() => {
     // Stagger effect for project cards
     gsap.fromTo(
@@ -120,6 +139,8 @@ const Works = () => {
     );
   }, []);
 
+  const displayedProjects = projects;
+
   return (
     <>
       <div>
@@ -134,12 +155,26 @@ const Works = () => {
       </div>
 
       <div className="works-container mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-5">
-        {projects.map((project, index) => (
+        {displayedProjects.map((project, index) => (
           <div key={`project-${index}`} className="project-card">
             <ProjectCard index={index} {...project} />
           </div>
         ))}
       </div>
+
+      {isHome && (
+        <div className="mt-12 flex justify-center">
+          <button
+            onClick={() => {
+              navigate("/projects");
+              window.scrollTo(0, 0);
+            }}
+            className="px-6 py-3 rounded-xl border border-secondary text-white font-semibold tracking-wider hover:bg-white hover:text-tertiary hover:border-white transition-all duration-300 cursor-pointer shadow-lg"
+          >
+            View More
+          </button>
+        </div>
+      )}
     </>
   );
 };
