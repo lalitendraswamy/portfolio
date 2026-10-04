@@ -21,6 +21,7 @@ const ProjectCard = ({
   image,
   source_code_link,
   demo_link,
+  demo_in_new_tab,
 }) => {
   const cardRef = useRef(null);
   const navigate = useNavigate();
@@ -82,7 +83,11 @@ const ProjectCard = ({
               <div
                 onClick={(e) => {
                   e.stopPropagation();
-                  navigate(demo_link);
+                  if (demo_in_new_tab) {
+                    window.open(demo_link, "_blank", "noopener,noreferrer");
+                  } else {
+                    navigate(demo_link);
+                  }
                 }}
                 className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
                 title="Interact Live"
