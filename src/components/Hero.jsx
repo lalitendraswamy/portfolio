@@ -21,12 +21,13 @@ const Hero = () => {
             Hi, I'm <span className="text-[#915EFF]">{CommonEnum.NAME}</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I specialize in Web Development, Cloud Platforms, <br className="sm:block hidden" />
+            I specialize in Web Development, Cloud Platforms,{" "}
+            <br className="sm:block hidden" />
             and building intelligent Generative AI systems.
           </p>
           <div className="mt-6">
             <a
-              href="https://drive.google.com/file/d/13YIxfSsKHdwKahyC1jIBLMqjM45HB8Et/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1M8X3NZrksg4j8piDsL5WlR5cn1jr5fc8/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#915EFF] hover:bg-violet-600 text-white font-semibold py-3 px-6 rounded-xl transition duration-300 ease-in-out inline-flex items-center gap-2 shadow-lg shadow-[#915eff]/30 border border-[#915eff]/50 hover:scale-105 active:scale-95"

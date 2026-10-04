@@ -40,12 +40,13 @@ import {
 } from "../assets";
 
 // Import Tekisky separately
-import noventiqai_logo from "../assets/company/noventiqai_logo.png"
+import noventiqai_logo from "../assets/company/noventiqai_logo.png";
 import ve_logo from "../assets/company/ve_logo.png";
 import yt_keyword from "../assets/yt_keyword.webp";
 import emoji_game from "../assets/emoji_game.webp";
 import insta_clone from "../assets/insta_clone.webp";
 import portfolio_rag_engine from "../assets/portfolio_rag_engine.png";
+import construction_estimator_agent from "../assets/construction_estimator_agent.png";
 
 export const navLinks = [
   {
@@ -199,7 +200,7 @@ const projects = [
   {
     name: "RAG Profile Intelligence System",
     description:
-      "A Retrieval-Augmented Generation (RAG) system integrating LangChain, Gemini API, and vector storage. Features context-aware prompt orchestration, semantic search, dynamic persona simulation (HR, Interviewer, Student, Freelancer).",
+      "A Retrieval-Augmented Generation (RAG) system integrating Gemini API, and vector storage. Features context-aware prompt orchestration, semantic search, dynamic persona simulation (HR, Interviewer, Student, Freelancer).",
     tags: [
       {
         name: "react",
@@ -219,8 +220,51 @@ const projects = [
       },
     ],
     image: portfolio_rag_engine,
-    source_code_link: "https://github.com/lalitendraswamy/portfolio-rag-agent",
+    source_code_link:
+      "https://github.com/lalitendraswamy/construction-cost-estimator-agent-api.git",
     demo_link: "/projects/rag-profile-system",
+  },
+  {
+    name: "Construction Cost Estimator Agent",
+    description:
+      "A multi-agent construction cost estimator using LangGraph, LangChain, Gemini and FastAPI. A supervisor routes intake, estimation, RAG and contact agents, supporting multilingual chat, deterministic pricing, SSE streaming, and owner approval via human-in-the-loop.",
+    tags: [
+      {
+        name: "langgraph",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "fastapi",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "gemini",
+        color: "white-text-gradient",
+      },
+    ],
+    image: construction_estimator_agent,
+    source_code_link:
+      "https://github.com/lalitendraswamy/construction-cost-estimator-agent-api",
+    demo_link:
+      "https://ravikumar-portfolio-beta.vercel.app/products/construction-estimater",
+    demo_in_new_tab: true,
+  },
+  {
+    name: "Emoji Game",
+    description:
+      "React-based Emoji Game, which includes score tracking, win/lose conditions, and high score functionality...",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: emoji_game,
+    source_code_link: "https://github.com/lalitendraswamy/emojiGame",
   },
   {
     name: "Youtube Keyword Search Volume",
@@ -244,19 +288,7 @@ const projects = [
     source_code_link:
       "https://github.com/lalitendraswamy/youtubeKeywordSearchVolume",
   },
-  {
-    name: "Emoji Game",
-    description:
-      "React-based Emoji Game, which includes score tracking, win/lose conditions, and high score functionality...",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-    ],
-    image: emoji_game,
-    source_code_link: "https://github.com/lalitendraswamy/emojiGame",
-  },
+
   {
     name: "Insta Share",
     description:
@@ -277,7 +309,7 @@ const projects = [
     ],
     image: insta_clone,
     source_code_link: "https://github.com/lalitendraswamy/instaClone",
-  }
+  },
 ];
 
 export { services, technologies, experiences, testimonials, projects };
